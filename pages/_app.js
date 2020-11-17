@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { ListContextProvider } from "../context";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ListContextProvider>
+      <Component {...pageProps} />
+    </ListContextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
