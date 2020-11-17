@@ -2,12 +2,12 @@ import Link from "next/link";
 import { initialItems } from "../../utils";
 import styles from "../../styles/Home.module.css";
 
-const DetailPage = ({ id }) => {
+const DetailPage = ({ id, locale }) => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hello from <span>{id}</span>
+          Hello from <span>{id}</span> in <span>{locale}</span>
         </h1>
 
         <p className={styles.description}>
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const { id } = params;
 
   if (!id) {
@@ -47,6 +47,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       id,
+      locale,
     },
   };
 }
