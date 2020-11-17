@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import List from "../components/List";
-import { initialItems, makeId } from "../utils";
+import { initialItems } from "../utils";
 
 export default function Home({ items }) {
   return (

@@ -1,4 +1,4 @@
-export function makeId(length) {
+export function makeId(length = 6) {
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   let result = "";
@@ -7,6 +7,10 @@ export function makeId(length) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   return result;
+}
+
+export function generateData() {
+  return [makeId(), makeId(), makeId(), makeId()]
 }
 
 export const initialItems = [

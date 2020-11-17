@@ -2,13 +2,13 @@ import Link from "next/link";
 import { useContext } from "react";
 import styles from "../styles/Home.module.css";
 import ListContext from "../context";
-import { makeId } from "../utils";
+import { generateData } from "../utils";
 
 const List = ({ items = [] }) => {
   const context = useContext(ListContext);
 
   function loadMoreFn() {
-    context.addFn([makeId(6), makeId(6), makeId(6), makeId(6)]);
+    context.addFn(generateData());
   }
 
   return (
