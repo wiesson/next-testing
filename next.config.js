@@ -9,6 +9,7 @@ module.exports = {
       {
         source: "/api/v1/hello",
         destination: "https://www.vercel.com",
+        locale: false,
       },
     ];
   },
