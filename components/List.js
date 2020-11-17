@@ -16,7 +16,9 @@ const List = ({ items = [] }) => {
       <div className={styles.grid}>
         {items.concat(context.items).map((item) => (
           <Link href={`/detail/${item}`} key={item}>
-            <a className={styles.card}>{item}</a>
+            <a className={styles.card}>
+              <h3>{item} &rarr;</h3>
+            </a>
           </Link>
         ))}
       </div>

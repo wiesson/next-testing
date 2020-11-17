@@ -5,16 +5,20 @@ import styles from "../../styles/Home.module.css";
 const DetailPage = ({ id }) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Hello from {id}</h1>
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Hello from <span>{id}</span>
+        </h1>
 
-      <p className={styles.description}>
-        Get started by editing{" "}
-        <code className={styles.code}>pages/index.js</code>
-      </p>
+        <p className={styles.description}>
+          Get started by editing{" "}
+          <code className={styles.code}>pages/index.js</code>
+        </p>
 
-      <Link href="/">
-        <a>&larr; Back</a>
-      </Link>
+        <Link href="/">
+          <a>&larr; Back</a>
+        </Link>
+      </main>
     </div>
   );
 };
